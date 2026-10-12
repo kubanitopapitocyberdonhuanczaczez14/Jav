@@ -26,7 +26,6 @@ public class MainActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
-        // Dopiero po setContentView()
         Imie = findViewById(R.id.imie);
         Nazwisko = findViewById(R.id.nazwisko);
         Email = findViewById(R.id.email);
@@ -40,12 +39,7 @@ public class MainActivity extends AppCompatActivity {
                             WindowInsetsCompat.Type.systemBars()
                     );
 
-                    v.setPadding(
-                            systemBars.left,
-                            systemBars.top,
-                            systemBars.right,
-                            systemBars.bottom
-                    );
+                    v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
 
                     return insets;
                 }
@@ -67,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
 
             Toast.makeText(
                     this,
-                    "Dane są poprawne!",
+                    "Dane poprawne",
                     Toast.LENGTH_SHORT
             ).show();
         });
@@ -80,14 +74,11 @@ public class MainActivity extends AppCompatActivity {
         String email = Email.getText().toString().trim();
         String haslo = Haslo.getText().toString().trim();
 
-        if (imie.isEmpty()
-                || nazwisko.isEmpty()
-                || email.isEmpty()
-                || haslo.isEmpty()) {
+        if (imie.isEmpty() || nazwisko.isEmpty() || email.isEmpty() || haslo.isEmpty()) {
 
             Toast.makeText(
                     this,
-                    "Uzupełnij wszystkie pola",
+                    "Uzupelnij wszystkie pola",
                     Toast.LENGTH_SHORT
             ).show();
 
@@ -105,7 +96,7 @@ public class MainActivity extends AppCompatActivity {
 
             Toast.makeText(
                     this,
-                    "Wpisz poprawny email!",
+                    "Wpisz poprawny email",
                     Toast.LENGTH_SHORT
             ).show();
 
@@ -119,10 +110,6 @@ public class MainActivity extends AppCompatActivity {
 
         String password = Haslo.getText().toString();
 
-        // Minimum 8 znaków:
-        // przynajmniej jedna mała litera,
-        // jedna wielka litera,
-        // jeden znak specjalny
         if (password.matches(
                 "^(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9]).{8,}$"
         )) {
@@ -131,7 +118,7 @@ public class MainActivity extends AppCompatActivity {
 
         Toast.makeText(
                 this,
-                "Hasło musi mieć minimum 8 znaków, małą i wielką literę oraz znak specjalny!",
+                "Błędne Hasło",
                 Toast.LENGTH_LONG
         ).show();
 
