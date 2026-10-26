@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:background="#D9FFF9">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/nazwa"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Nazwa pliku" />
+
+        <Button
+            android:id="@+id/otworz"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Otwórz" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Otwarte pliki:"
+        android:padding="5dp" />
+
+    <ListView
+        android:id="@+id/lista"
+        android:layout_width="match_parent"
+        android:layout_height="150dp" />
+
+    <EditText
+        android:id="@+id/tekst"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="top"
+        android:hint="Wpisz tekst..."
+        android:inputType="textMultiLine"
+        android:background="#FFFFFF" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/nowy"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Nowy" />
+
+        <Button
+            android:id="@+id/zapisz"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Zapisz" />
+
+        <Button
+            android:id="@+id/zamknij"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Zamknij" />
+
+        <Button
+            android:id="@+id/usun"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Usuń" />
+
+    </LinearLayout>
+
+</LinearLayout>
