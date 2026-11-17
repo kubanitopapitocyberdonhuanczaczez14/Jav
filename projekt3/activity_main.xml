@@ -1,1 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/glownyUklad"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="24dp"
+    android:background="@drawable/tlo1">
 
+    <LinearLayout
+        android:id="@+id/karta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="24dp"
+        android:background="@color/kolor_karty">
+
+        <TextView
+            android:id="@+id/napis"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Przykladowy tekst"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:textColor="@color/kolor_tekstu" />
+
+        <Button
+            android:id="@+id/przyciskTekst"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Zmień tekst" />
+
+        <Button
+            android:id="@+id/przyciskKolor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Zmień kolor tekstu" />
+
+        <Button
+            android:id="@+id/przyciskTlo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Zmień tło" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/przelacznikNoc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Tryb nocny"
+            android:textColor="@color/kolor_tekstu" />
+
+        <TextView
+            android:id="@+id/etykieta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Przezroczystość tekstu: 100%"
+            android:textColor="@color/kolor_tekstu" />
+
+        <SeekBar
+            android:id="@+id/suwak"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="100"
+            android:progress="100" />
+
+    </LinearLayout>
+
+</LinearLayout>
